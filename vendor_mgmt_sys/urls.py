@@ -5,5 +5,5 @@ from vendor.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
-    path('vendor/', include('vendor.urls'))
+    path('api/', include('vendor.urls'))
 ]
