@@ -1,0 +1,13 @@
+[flake8]
+ignore = E999, W503, W504, C901
+exclude =
+    .git,
+    node_modules,
+    __pycache__,
+    docs/source/conf.py,
+    dist,
+    migrations,
+    virtual_env,
+    vendor_mgmt_sys/settings.py,
+max-complexity = 10
+max-line-length = 88

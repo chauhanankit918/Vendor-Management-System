@@ -62,7 +62,7 @@ class PurchaseOrderAdmin(admin.ModelAdmin):
         "updated_at",
     )
     list_filter = ('order_date', 'delivery_date', 'issue_date', 'created_at')
-    search_fields = ['po_number', 'vendor__first_name', 'vendor__last_name',]
+    search_fields = ['po_number', 'vendor__first_name', 'vendor__last_name']
 
 
 class HistoricalPerformanceAdmin(admin.ModelAdmin):
