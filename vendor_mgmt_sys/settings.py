@@ -142,3 +142,7 @@ AUTH_USER_MODEL = 'vendor.Vendor'
 AUTHENTICATION_BACKENDS = (
     'vendor.backend.EmailAuthentication',
 )
+
+
+RAZORPAY_ID = "rzp_test_VUyMdoH7lg3ctM"
+RAZORPAY_KEY = "LkofYtkUcZHmUqhVtgZIRKvK"
