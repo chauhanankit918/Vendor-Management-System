@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <!-- payment.html -->
+     <h3>Yoy want to buy a coffee</h3>
+     
+<form action="/payment/success/" method="POST">
+    <script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key="{{ razorpay_key_id }}"
+        data-amount="{{ amount }}"
+        data-currency="{{ currency }}"
+        data-order_id="{{ order_id }}"
+        data-buttontext="Pay here"
+        data-name="Your Company"
+        data-description="Test Transaction"
+        data-theme.color="#F37254">
+    </script>
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+</form>
+
 </body>
 </html>
-
-
-

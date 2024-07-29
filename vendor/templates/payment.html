@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- payment.html -->
+    <form action="/payment/success/" method="POST">
+        <script
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="{{ RAZORPAY_KEY_ID }}"
+            data-amount="{{ order.amount }}"
+            data-currency="{{ order.currency }}"
+            data-order_id="{{ order.id }}"
+            data-buttontext="Pay with Razorpay"
+            data-name="Your Company"
+            data-description="Test Transaction"
+            data-theme.color="#F37254">
+        </script>
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    </form>
+
+</body>
+</html>
